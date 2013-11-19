@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Guess the Number!</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var secretNumber = parseInt(Math.random() * 100, 10) + 1;
+
+  var guess = prompt("Pick a number, sucker.");
+
+  var compareNumber = function (guess) {
+    if (guess > secretNumber) {
+      second = prompt("Too high. Pick a lower number.");
+      compareNumber(second);
+    } else if (guess < secretNumber) {
+      second = prompt("Too low. Pick a higher number.");
+      compareNumber(second);
+    } else {
+      alert("You've won. Cheater.");
+    }
+  }; 
+
+  compareNumber(guess);
+  
+</script>
+
+</body>
+</html>
